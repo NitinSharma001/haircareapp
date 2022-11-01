@@ -1,0 +1,107 @@
+
+#btn_no_9{
+    width: 15rem;
+}
+.btn_frame_no_5{
+   width: 14rem;
+}
+#next_btn{
+    border-radius: 0rem;
+    color: white;
+    background-color: rgb(35, 35, 35);
+    margin-top: 3rem;
+}
+#btn_frame_6{
+    border-radius: 0;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    margin-top: 4rem;
+}
+#heart{
+    font-size: 1.5rem;
+    color: red;
+}
+
+
+.frame7_inside{
+    max-width: 540px;
+}
+.frame7Mapinside{
+    margin-top: 1rem;
+}
+img{
+    margin-top: 0%;
+    width: auto;
+}
+.card-body{
+    text-align: start;
+    margin: 0px;
+    height: 10rem;
+    padding-top: 3rem;
+    
+
+}
+.frame8img{
+    height: 7rem;
+}
+#frame8_btn_footer{
+    width: 6rem;
+}
+
+.frame_8_main_div{
+   background-color: aliceblue;
+}
+#frame8_btn{
+    border-radius: 1px; 
+    width: max-content; 
+       
+   }
+
+   /* frame 9 css */
+
+   .frame_9_input{
+border: none;
+border-radius: 0%;
+border-bottom: 1px solid rgb(160, 160, 160);
+
+}
+
+.frame_9_input:hover{
+    color: rgb(0, 0, 0);  
+    font-weight: bolder;
+    border-color: aliceblue;
+    }
+#delivery_submit_btn{
+    border-radius: 0%;
+  height: 5rem;
+    width: auto;
+    font-size: 2rem;
+    font-weight: 900;
+ 
+    
+}
+
+
+.form-error
+{
+    animation:  shake 0.8s  ;
+  }
+  
+  @keyframes shake{
+    0%{
+      transform: translateX(0)
+    }
+    10%{
+        transform: translateX(10px)
+      }
+    25%{
+      transform: translateX(25px);
+    }
+      
+    50%{
+      transform: translateX(-25px);
+    }
+    100%{
+      transform: translateX(0px);
+    }
+  }
