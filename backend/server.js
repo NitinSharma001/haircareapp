@@ -28,15 +28,7 @@ await newAddress.save();
 res.json(address)
 
 })
-// app.post("/token", async (req, res)=>{
 
-  
-//   const token= req.body;
-//   const newToken= new Token(token);
-// await newToken.save();
-// res.json(token)
-
-// })
  
 app.get("/getUser", (request, response) => {
   Delevery.find(email,name,p)
