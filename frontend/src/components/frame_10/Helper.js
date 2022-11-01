@@ -81,7 +81,7 @@ const Helper = (props) => {
       console.log("asdd: ", card_token);
 
       try {
-          const result = (await axios.post("http://localhost:4500/payment", { name: name, token: card_token?.token.id, price: 123*100 }))
+          const result = (await axios.post("https://hair-care.herokuapp.com/payment", { name: name, token: card_token?.token.id, price: 123*100 }))
           Navigate("/frame10");
 
           console.log(result);

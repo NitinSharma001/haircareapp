@@ -24,7 +24,7 @@ const Frame9 = () => {
         console.log(values);
 
         axios
-          .post("http://localhost:4500/address", {
+          .post("https://hair-care.herokuapp.com/address", {
             name:values.name,
             street: values.street,
     city:values.city,
