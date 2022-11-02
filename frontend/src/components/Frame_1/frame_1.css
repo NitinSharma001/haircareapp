@@ -86,3 +86,23 @@ padding-top: 9rem;
    font-size: 25px;
    padding-bottom: 10rem;
 }
+
+
+@media only screen and (max-width:450px) and (min-width: 300px)  {
+   
+   .frame1Map {
+      
+      display: contents;
+  }
+  #next_btn {
+  
+   margin-bottom: 12px;
+   
+}
+
+
+
+ }
+
+
+

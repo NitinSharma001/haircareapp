@@ -3,5 +3,6 @@ body{
 background-color: #d8fffe;
 overflow-x: hidden;
 overflow-y: visible;
+height: auto;
 }
 
