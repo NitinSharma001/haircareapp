@@ -16,6 +16,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Helper = (props) => {
   const [name, setname] = useState("")
+  console.log(props.values)
 
     const stripe = useStripe();
     const elements = useElements();
@@ -92,7 +93,7 @@ const Helper = (props) => {
   }
     
   return (
-    <div>
+    <div >
 <div class="shadow-sm p-3 mb-5 rounded " onClick={frameNavigate}>
         <i class="fa-solid fa-arrow-left-long"> back</i>
         {/* <h4>Back</h4> */}

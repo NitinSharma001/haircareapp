@@ -4,10 +4,15 @@ import { useNavigate } from 'react-router-dom';
 
 const Frame5 = () => {
   const navigate = useNavigate();
-  const [btndata, setBtndata] = useState(0)
+  const [btndata, setBtndata] = useState(false)
 
     const datafunction = () => {
-      setBtndata(1)
+      if(btndata==false){
+        setBtndata(true)
+      }
+      else{
+        setBtndata(false)
+      }
     }
 
   const frameNavigate =  () =>{

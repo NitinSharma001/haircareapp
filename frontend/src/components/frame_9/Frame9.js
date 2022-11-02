@@ -4,7 +4,8 @@ import { useFormik } from "formik";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { deliverySchema } from "../../schemas";
-const Frame9 = () => {
+
+const Frame9 = (props) => {
   const initialValues = {
     name: "",
     street: "",
@@ -21,7 +22,7 @@ const Frame9 = () => {
       initialValues: initialValues,
       validationSchema: deliverySchema,
       onSubmit: (values) => {
-        console.log(values);
+        // console.log(values);
 
         axios
           .post("https://hair-care.herokuapp.com/address", {
@@ -38,7 +39,11 @@ const Frame9 = () => {
           .catch((error) => console.log(error));
           Navigate("/frame9")
       },
+
+
     });
+ 
+
 
   const Navigate = useNavigate();
   const frameNavigate = () => {
@@ -47,6 +52,7 @@ const Frame9 = () => {
 
   return (
     <div>
+     
       <div class="shadow-sm p-3 mb-5 rounded " onClick={frameNavigate}>
         <i class="fa-solid fa-arrow-left-long"> back</i>
         {/* <h4>Back</h4> */}
