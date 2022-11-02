@@ -6,8 +6,9 @@ const Frame6 = () => {
   const navigate = useNavigate();
   const [btnData, setBtnData] = useState(0)
 
-  const dataFuntion = () =>{
+  const dataFuntion = (x) =>{
     setBtnData(btnData + 1)
+    x.style.background = "yellow";
   }
   console.log(btnData)
 
@@ -27,7 +28,7 @@ const Frame6 = () => {
     };
 
  
-
+// const  focusfnc  = () =>{}
 
 
   const frame6_data = [
@@ -53,15 +54,15 @@ const Frame6 = () => {
   ]
   return (
     <div>
-      {" "}
+      
       <div class="shadow-sm p-3 mb-5  rounded" onClick={frameNavigateBack}>
         <i class="fa-solid fa-arrow-left-long">
           back
         </i>
       </div>
       <div className="row">
-        <div className="col-2"></div>
-        <div className="col-8">
+        <div className="col-sm-2"></div>
+        <div className="col-sm-8  frameSixProgressBar">
           {" "}
           <div class="progress">
             <div
@@ -80,7 +81,7 @@ const Frame6 = () => {
             SELECTION
           </h6>
         </div>
-        <div className="col-2"></div>
+        <div className="col-sm-8"></div>
       </div>
       <div className="row text-center">
         <div className="col-2"></div>
@@ -91,7 +92,7 @@ const Frame6 = () => {
 return (
   
   <div className="frame1Mapinside col-sm-4 ">
-  <button class="btn btn-outline-success btn_frame_no_5"
+  <button class="btn btn-outline-success btn_frame_no_5" onfocus="focusfnc(this)"
     onClick={dataFuntion} >{btn}</button>
 </div>
 

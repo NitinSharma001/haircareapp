@@ -46,8 +46,7 @@ const Frame5 = () => {
       <div className="row">
         <div className="col-sm-2"></div>
         <div className="col-sm-8">
-          {" "}
-          <div class="progress">
+        <div class="progress ">
             <div
               class="progress-bar"
               role="progressbar"
@@ -57,6 +56,7 @@ const Frame5 = () => {
               aria-valuemax="100"
             ></div>
           </div>
+          
           <h2 className="text-center">Which color describes your hair?</h2>
           <p className="text-center">choose the color that best fit your current hair</p>
           <h5 className="text-center">

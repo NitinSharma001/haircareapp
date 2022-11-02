@@ -88,7 +88,7 @@ padding-top: 9rem;
 }
 
 
-@media only screen and (max-width:450px) and (min-width: 300px)  {
+@media only screen and (max-width:600px) and (min-width: 300px)  {
    
    .frame1Map {
       
@@ -99,6 +99,10 @@ padding-top: 9rem;
    margin-bottom: 12px;
    
 }
+/* .frameSixProgressBar{
+   margin-left: 40px;
+    width: 80%;
+} */
 
 
 

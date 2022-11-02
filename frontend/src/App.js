@@ -10,7 +10,7 @@ import Frame4 from "./components/Frame_4/Frame4";
 import Frame5 from "./components/frame_5/Frame5";
 import Frame6 from "./components/frame_6/Frame6";
 import Frame7 from "./components/frame_7/Frame7";
-import Frame8 from "./components/frame_8/Frame8";
+import Frame8 from "./components/frame_7/frame_8/Frame8";
 import Frame9 from "./components/frame_9/Frame9";
 import Frame10 from "./components/frame_10/Frame10"
 // import Frame11 from "./frame_11/Frame11";
@@ -61,6 +61,7 @@ const App = () => {
 
         </Routes>
       </BrowserRouter>
+      
     </div>
   );
 };

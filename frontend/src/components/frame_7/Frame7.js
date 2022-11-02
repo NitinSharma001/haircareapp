@@ -170,7 +170,7 @@ return (
           </div>
         </div>
 
-        <div className="col-2">d</div>
+        <div className="col-2"></div>
       </div>
     </div>
   )
