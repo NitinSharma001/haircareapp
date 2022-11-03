@@ -112,5 +112,14 @@ return (
     </div>
   )
 }
+export default Frame5;
 
-export default Frame5
+
+// function sampleAction(dispatch,payload){
+//   dispatch({
+//     type: 'reset',
+//     payload
+//   })
+// }
+
+// sampleAction(dispatch,"sample")
