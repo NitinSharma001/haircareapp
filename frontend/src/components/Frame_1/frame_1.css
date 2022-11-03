@@ -87,6 +87,10 @@ padding-top: 9rem;
    padding-bottom: 10rem;
 }
 
+button.btn.btn-outline-success.btn_frame_no_5.selected {
+ background-color: #228d83;
+}
+
 
 @media only screen and (max-width:600px) and (min-width: 300px)  {
    
