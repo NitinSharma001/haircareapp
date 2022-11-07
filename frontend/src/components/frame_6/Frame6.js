@@ -15,6 +15,7 @@ const Frame6 = () => {
       setHairGoals((prevState) => [...prevState, data.id]);
     }
     setBtnData(btnData + 1);
+    console.log(btnData)
   };
 
   const frameNavigate = () => {
@@ -49,11 +50,11 @@ const Frame6 = () => {
     { id: 14, btn: "Stengthen hair" },
     { id: 15, btn: "Thermal protection" },
   ];
-  const [isActive, setIsActive] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
 
-  const handleClick = () => {
-    setIsActive((current) => !current);
-  };
+  // const handleClick = () => {
+  //   setIsActive((current) => !current);
+  // };
 
   return (
     <div>
@@ -108,14 +109,14 @@ const Frame6 = () => {
             })}
           </div>
           <div className="row">
-            <div className="col-3"></div>
-            <div className="col-6">
+            <div className="col-1"></div>
+            <div className="col-10">
               <button className="btn" id="btn_frame_6" onClick={frameNavigate}>
                 NEXT
               </button>
             </div>
 
-            <div className="col-3"></div>
+            <div className="col-1"></div>
           </div>
         </div>
 
