@@ -50,10 +50,7 @@ const Helper = (props) => {
       },
     };
 
-    const Navigate = useNavigate();
-    const frameNavigate = () => {
-      Navigate("/frame8");
-    };
+    
    
     
 
@@ -83,8 +80,7 @@ const Helper = (props) => {
 
       try {
           const result = (await axios.post("https://hair-care.herokuapp.com/payment", { name: name, token: card_token?.token.id, price: 123*100 }))
-          Navigate("/frame10");
-
+props.setCurrentPage(props.currentPage +1)
           console.log(result);
       } catch (error) {
           console.log(error);
@@ -94,10 +90,7 @@ const Helper = (props) => {
     
   return (
     <div >
-<div class="shadow-sm p-3 mb-5 rounded " onClick={frameNavigate}>
-        <i class="fa-solid fa-arrow-left-long"> back</i>
-        {/* <h4>Back</h4> */}
-      </div>
+
         <form >
 
           <div className="row">

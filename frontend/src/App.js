@@ -13,13 +13,72 @@ import Frame8 from "./components/frame_7/frame_8/Frame8";
 import Frame9 from "./components/frame_9/Frame9";
 import Frame10 from "./components/frame_10/Frame10";
 // import Frame11 from "./frame_11/Frame11";
-import Dummy from "./components/frame_10/dummy";
+import Frame11 from "./components/frame_11/Frame11";
 
 import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
-
+import { useState } from "react";
 const App = () => {
+  const [currentPage, setCurrentPage] = useState(1)
+  const prev =()=>{
+  if (currentPage===1){
+alert("work under construction")
+  }else{
+    setCurrentPage(currentPage - 1)
+
+  }
+  }
   return (
+
     <div className="App">
+      <div class="shadow-sm p-3 mb-5  rounded" onClick={prev} id="frame_1_navbar">
+        <i class="fa-solid fa-arrow-left-long"> back</i>
+      </div>
+      {currentPage===1 &&(
+        <>
+        <Frame1 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+      )}
+      {currentPage===2 &&(
+        <>
+        <Frame2 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+      )}
+      {currentPage===3 &&(
+        <>
+        <Frame3 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+      )}
+      {currentPage===4 &&(
+        <>
+        <Frame4 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+      )}
+           {currentPage===5 &&(
+        <>
+        <Frame5 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+      )}
+      {currentPage===6 &&(
+        <>
+        <Frame6 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+      )}
+      {currentPage===7&&(
+        <>
+        <Frame7 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+      )}
+      {currentPage===8 &&(
+        <>
+        <Frame8 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+      )}
+{currentPage===9 &&(
+        <>
+        <Frame9 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+      )}
+      {currentPage===10 &&(
+        <>
+        <Frame10 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+      )}
+      {currentPage===11 &&(
+        <>
+        <Frame11 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+      )}
+     
+
       {/* <Frame1 />
       <Frame2/>
       <Frame3 />
@@ -28,7 +87,7 @@ const App = () => {
 <Frame6/>
  <Frame7 /> 
  <Frame8/> */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Frame1 />} />
 
@@ -47,7 +106,7 @@ const App = () => {
           <Route exact path="/frame9" element={<Frame10 />} />
           <Route exact path="/frame10" element={<Dummy />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
     </div>
   );
 };

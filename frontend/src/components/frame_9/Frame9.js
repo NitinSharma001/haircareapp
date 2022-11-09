@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -37,7 +36,7 @@ const Frame9 = (props) => {
           })
           .then((res) => console.log(res))
           .catch((error) => console.log(error));
-          Navigate("/frame9")
+          props.setCurrentPage(props.currentPage + 1)
       },
 
 
@@ -45,18 +44,12 @@ const Frame9 = (props) => {
  
 
 
-  const Navigate = useNavigate();
-  const frameNavigate = () => {
-    Navigate("/frame7");
-  };
+
 
   return (
     <div>
      
-      <div class="shadow-sm p-3 mb-5 rounded " onClick={frameNavigate}>
-        <i class="fa-solid fa-arrow-left-long"> back</i>
-        {/* <h4>Back</h4> */}
-      </div>
+   
       <div className="row">
         <div className="col-sm-2"></div>
         <div className="col-sm-8">

@@ -2,14 +2,15 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 // import shape from 'images/shape.png'
 
-const Frame8 = () => {
-  const navigate = useNavigate();
+const Frame8 = (props) => {
 
   const frameNavigate = () => {
-    navigate("/frame6");
+    // navigate("/frame6");
+
   };
   const orderbooking = () => {
-    navigate("/frame8");
+    props.setCurrentPage(props.currentPage + 1)
+
   };
 
 
@@ -38,10 +39,7 @@ const Frame8 = () => {
 
   return (
     <div>
-      <div class="shadow-sm p-3 mb-5 rounded " onClick={frameNavigate}>
-        <i class="fa-solid fa-arrow-left-long"> back</i>
-        {/* <h4>Back</h4> */}
-      </div>
+    
 
 <div className="row">
   <div className="col-sm-2"></div>

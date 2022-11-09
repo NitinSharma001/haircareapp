@@ -6,16 +6,13 @@ import React from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
-const Frame2 = () => {
-  const navigate = useNavigate();
+const Frame2 = (props) => {
 
   const frameNavigate = () => {
-    navigate("/frame2");
+    props.setCurrentPage(props.currentPage + 1)
   };
 
-  const frameNavigateBack = () => {
-    navigate("/");
-  };
+  
   const frame2_data = [
     {
       id: 1,
@@ -45,9 +42,7 @@ const Frame2 = () => {
 
   return (
     <div>
-      <div class="shadow-sm p-3 mb-5  rounded" onClick={frameNavigateBack}>
-        <i class="fa-solid fa-arrow-left-long"> back </i>
-      </div>
+      
       <div className="row">
         <div className="col-sm-2"></div>
         <div className="col-sm-8">

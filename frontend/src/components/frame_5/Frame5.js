@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 
-const Frame5 = () => {
-  const navigate = useNavigate();
+const Frame5 = (props) => {
   const [btndata, setBtndata] = useState(false)
 
     const datafunction = () => {
@@ -18,16 +17,14 @@ const Frame5 = () => {
   const frameNavigate =  () =>{
     
     if(btndata==1){
-      navigate("/frame5");
+    props.setCurrentPage(props.currentPage + 1)
     }
     else {
       console.log("err")
     }
     }
 
-    const frameNavigateBack = () => {
-      navigate("/frame3");
-    };
+ 
     
     console.log(btndata)
   const frame5_data = [
@@ -45,9 +42,7 @@ const Frame5 = () => {
   ]
   return (
     <div>
-         <div class="shadow-sm p-3 mb-5  rounded" onClick={frameNavigateBack }>
-        <i class="fa-solid fa-arrow-left-long"> back</i>
-      </div>
+        
       <div className="row">
         <div className="col-sm-2"></div>
         <div className="col-sm-8">

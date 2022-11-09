@@ -4,13 +4,14 @@ import { useNavigate } from "react-router-dom";
 import "./frame_1.css";
 
 
-const Frame1 = () => {
-  const navigate = useNavigate();
+const Frame1 = (props) => {
+  // const navigate = useNavigate();
 
   const frameNavigate =  () =>{
-    navigate('/frame1')
-    }
-  const frame1_data = [
+
+    props.setCurrentPage(props.currentPage + 1)
+  }
+      const frame1_data = [
     {
       id: 1,
       image: "images/straight 1.svg",
@@ -62,9 +63,7 @@ const Frame1 = () => {
   ];
   return (
     <div id="frame_1">
-      <div class="shadow-sm p-3 mb-5  rounded" id="frame_1_navbar">
-        <i class="fa-solid fa-arrow-left-long"> back</i>
-      </div>
+      
       <div className="row">
         <div className="col-sm-2"></div>
         <div className="col-sm-8">
@@ -100,7 +99,7 @@ const Frame1 = () => {
 <div className="frame1Map">{frame1_data.map((data)=>{
   const {id, image, heading, para} = data
 return (
-  <div className="frame1Mapinside col-sm-3" onClick={frameNavigate}>
+  <div className="frame1Mapinside col-sm-3"  onClick={frameNavigate}>
      <img src={image} alt=""></img>
      <h3>{heading}</h3>
      <p>{para}</p>

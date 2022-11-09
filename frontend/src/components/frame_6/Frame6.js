@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Frame10 from "../frame_10/Frame10";
-const Frame6 = () => {
-  const navigate = useNavigate();
+const Frame6 = (props) => {
+  // const navigate = useNavigate();
   const [btnData, setBtnData] = useState(0);
   const [hairGoals, setHairGoals] = useState([]);
 
@@ -20,15 +20,15 @@ const Frame6 = () => {
 
   const frameNavigate = () => {
     if (hairGoals.length > 0 && hairGoals.length <= 5) {
-      navigate("/frame6");
+      props.setCurrentPage(props.currentPage + 1)
     } else {
       alert(`select upto 5 -----you select only ${hairGoals.length}`);
     }
   };
 
-  const frameNavigateBack = () => {
-    navigate("/frame4");
-  };
+  // const frameNavigateBack = () => {
+  //   navigate("/frame4");
+  // };
 
   // const  focusfnc  = () =>{}
 
@@ -58,9 +58,7 @@ const Frame6 = () => {
 
   return (
     <div>
-      <div className="shadow-sm p-3 mb-5  rounded" onClick={frameNavigateBack}>
-        <i className="fa-solid fa-arrow-left-long">back</i>
-      </div>
+      
       <div className="row">
         <div className="col-sm-2"></div>
         <div className="col-sm-8  frameSixProgressBar">

@@ -1,17 +1,15 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./frame_4.css";
 
-const Frame4 = () => {
-  const navigate = useNavigate();
+const Frame4 = (props) => {
 
-  const frameNavigate =  () =>{
-    navigate('/frame4')
-    }
+   const frameNavigate =  () =>{
+    props.setCurrentPage(props.currentPage + 1)
+  }
 
-    const frameNavigateBack = () => {
-      navigate("/frame2");
-    };
+  //   const frameNavigateBack = () => {
+  //     navigate("/frame2");
+  //   };
 
   const frame4_data = [
     { id: 1, btn: "Balayaga" },
@@ -26,9 +24,7 @@ const Frame4 = () => {
   ];
   return (
     <div>
-      <div class="shadow-sm p-3 mb-5  rounded" onClick={frameNavigateBack}>
-        <i class="fa-solid fa-arrow-left-long"> back</i>
-      </div>
+      
       <div className="row">
         <div className="col-sm-2"></div>
         <div className="col-sm-8">
@@ -59,7 +55,7 @@ const Frame4 = () => {
   const {id, btn} = data
 return (
   <div className="frame1Mapinside col-sm-3">
-  <button class="btn btn-outline-success" onClick={frameNavigate}>{btn}</button>
+  <button class="btn btn-outline-success "onClick={frameNavigate} >{btn}</button>
 </div>
 )
 

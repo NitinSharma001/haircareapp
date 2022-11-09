@@ -2,16 +2,13 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
 // import pic from "./images/Rectangle 20 (1).jpg"
-const Frame7 = () => {
-  const navigate = useNavigate();
+const Frame7 = (props) => {
 
   const frameNavigate =  () =>{
-    navigate('/frame7')
+    props.setCurrentPage(props.currentPage + 1)
     }
 
-    const frameNavigateBack = () => {
-      navigate("/frame5");
-    };
+   
 
 
   const frame7_btn = [
@@ -66,10 +63,7 @@ const Frame7 = () => {
   ]
   return (
     <div>
-        <div class="shadow-sm p-3 mb-5  rounded" onClick={frameNavigateBack}>
-        <i class="fa-solid fa-arrow-left-long"> back</i>
-        {/* <h4>Back</h4> */}
-      </div>
+       
       <div className="row">
         <div className="col-2"></div>
         <div className="col-8">
