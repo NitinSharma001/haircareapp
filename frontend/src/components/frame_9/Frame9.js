@@ -22,34 +22,27 @@ const Frame9 = (props) => {
       validationSchema: deliverySchema,
       onSubmit: (values) => {
         // console.log(values);
+        const payload = {
+          name: values.name,
+          street: values.street,
+          city: values.city,
+          state: values.state,
+          zip: values.zip,
+          country: values.country,
+          mobile: values.mobile,
+          email: values.email,
+        };
 
         axios
-          .post("https://hair-care.herokuapp.com/address", {
-            name:values.name,
-            street: values.street,
-    city:values.city,
-    state: values.state,
-    zip: values.zip,
-    country: values.country,
-    mobile: values.mobile,
-    email: values.email,
-          })
+          .post("https://hair-care.herokuapp.com/address", payload)
           .then((res) => console.log(res))
           .catch((error) => console.log(error));
-          props.setCurrentPage(props.currentPage + 1)
+        props.setCurrentPage(props.currentPage + 1);
       },
-
-
     });
- 
-
-
-
 
   return (
     <div>
-     
-   
       <div className="row">
         <div className="col-sm-2"></div>
         <div className="col-sm-8">
@@ -72,7 +65,7 @@ const Frame9 = (props) => {
                     onBlur={handleBlur}
                   />
                   {errors.name && touched.name ? (
-                    <p className="form-error" style={{ color: "red" }} >
+                    <p className="form-error" style={{ color: "red" }}>
                       {errors.name}
                     </p>
                   ) : null}
@@ -127,8 +120,8 @@ const Frame9 = (props) => {
                       State
                     </label>
                     <input
-                     class="form-control frame_9_input bg-light "
-                     id="formGroupExampleInput "
+                      class="form-control frame_9_input bg-light "
+                      id="formGroupExampleInput "
                       type="text"
                       name="state"
                       placeholder="Enter Your State name"
@@ -166,8 +159,8 @@ const Frame9 = (props) => {
                 <div class="p-3">
                   <p>Country</p>
                   <input
-                   class="form-control frame_9_input bg-light "
-                   id="formGroupExampleInput "
+                    class="form-control frame_9_input bg-light "
+                    id="formGroupExampleInput "
                     type="text"
                     name="country"
                     placeholder="Enter Your Country Name "
@@ -223,7 +216,11 @@ const Frame9 = (props) => {
 
                   <div id="but" className="d-grid gap-2">
                     {/* <input type="submit" class="bg-info text-white butsend" value="Submit@123"/> */}
-                    <button class="btn btn-success" type="submit" id="delivery_submit_btn">
+                    <button
+                      class="btn btn-success"
+                      type="submit"
+                      id="delivery_submit_btn"
+                    >
                       Submit
                     </button>
                   </div>
@@ -239,8 +236,3 @@ const Frame9 = (props) => {
 };
 
 export default Frame9;
-
-
-
-
-

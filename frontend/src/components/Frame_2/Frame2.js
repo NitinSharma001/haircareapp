@@ -8,8 +8,11 @@ import { Link } from "react-router-dom";
 
 const Frame2 = (props) => {
 
-  const frameNavigate = () => {
+  const frameNavigate = (data) => {
     props.setCurrentPage(props.currentPage + 1)
+
+    props.setQuestionTwo(props.questionTwo+data)
+    console.log(data)
   };
 
   
@@ -76,7 +79,7 @@ const Frame2 = (props) => {
               return (
                 <div
                   className="frame1Mapinside col-sm-4"
-                  onClick={frameNavigate}
+                  onClick={()=>frameNavigate(data)}
                 >
                   <img src={image} alt=""></img>
                   <h3>{heading}</h3>

@@ -4,25 +4,28 @@ import { useNavigate } from "react-router-dom";
 import Frame10 from "../frame_10/Frame10";
 const Frame6 = (props) => {
   // const navigate = useNavigate();
-  const [btnData, setBtnData] = useState(0);
-  const [hairGoals, setHairGoals] = useState([]);
+  
 
   const dataFuntion = (data) => {
-    if (hairGoals.includes(data.id)) {
-      // setHairGoals();
-      setHairGoals((current) => current.filter((x) => x !== data.id));
+    if (props.hairGoals.includes(data.id)) {
+      // props.setHairGoals();
+      props.setHairGoals((current) => current.filter((x) => x !== data.id));
+     
+      
     } else {
-      setHairGoals((prevState) => [...prevState, data.id]);
+      props.setHairGoals((prevState) => [...prevState, data.id]);
+
+      
     }
-    setBtnData(btnData + 1);
-    console.log(btnData)
+    props.setBtnData(props.btnData + 1);
+    console.log(props.hairGoals)
   };
 
   const frameNavigate = () => {
-    if (hairGoals.length > 0 && hairGoals.length <= 5) {
+    if (props.hairGoals.length > 0 && props.hairGoals.length <= 5) {
       props.setCurrentPage(props.currentPage + 1)
     } else {
-      alert(`select upto 5 -----you select only ${hairGoals.length}`);
+      alert(`select upto 5 -----you select only ${props.hairGoals.length}`);
     }
   };
 
@@ -92,12 +95,13 @@ const Frame6 = (props) => {
                 <div className="frame1Mapinside col-sm-4 " key={key}>
                   <button
                     className={
-                      hairGoals.includes(data.id)
+                      props.hairGoals.includes(data.id)
                         ? "btn btn-outline-success btn_frame_no_5 selected"
                         : "btn btn-outline-success btn_frame_no_5"
                     }
                     onClick={function (event) {
                       dataFuntion(data);
+                  
                     }}
                   >
                     {btn}

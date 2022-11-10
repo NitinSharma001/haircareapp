@@ -3,8 +3,10 @@ import "./frame_4.css";
 
 const Frame4 = (props) => {
 
-   const frameNavigate =  () =>{
+   const frameNavigate =  (data) =>{
     props.setCurrentPage(props.currentPage + 1)
+    props.setQuestionFour(props.questionFour+data)
+    console.log(data)
   }
 
   //   const frameNavigateBack = () => {
@@ -51,11 +53,11 @@ const Frame4 = (props) => {
         <div className="col-sm-2"></div>
         <div className="col-sm-8">
         <div className="frame1Map">
-        {frame4_data.map((data)=>{
+        {frame4_data.map((data,key)=>{
   const {id, btn} = data
 return (
-  <div className="frame1Mapinside col-sm-3">
-  <button class="btn btn-outline-success "onClick={frameNavigate} >{btn}</button>
+  <div className="frame1Mapinside col-sm-3"key={key}>
+  <button class="btn btn-outline-success "onClick={()=>frameNavigate(data)} >{btn}</button>
 </div>
 )
 

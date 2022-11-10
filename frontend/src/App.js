@@ -2,6 +2,7 @@
 
 import "./App.css";
 import React from "react";
+
 import Frame1 from "./components/Frame_1/Frame1";
 import Frame2 from "./components/Frame_2/Frame2";
 import Frame3 from "./components/Frame_3/Frame3";
@@ -18,7 +19,22 @@ import Frame11 from "./components/frame_11/Frame11";
 import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
 import { useState } from "react";
 const App = () => {
+  const [btnData, setBtnData] = useState(0);
+  const [hairGoals, setHairGoals] = useState([]);
   const [currentPage, setCurrentPage] = useState(1)
+  const [question, setQuestion] = useState()
+  const [questionTwo, setQuestionTwo] = useState()
+  const [questionThree, setQuestionThree] = useState()
+  const [questionFour, setQuestionFour] = useState()
+  const [questionFive, setQuestionFive] = useState()
+  const [questionSix, setQuestionSix] = useState()
+
+
+
+
+
+
+
   const prev =()=>{
   if (currentPage===1){
 alert("work under construction")
@@ -30,32 +46,38 @@ alert("work under construction")
   return (
 
     <div className="App">
-      <div class="shadow-sm p-3 mb-5  rounded" onClick={prev} id="frame_1_navbar">
-        <i class="fa-solid fa-arrow-left-long"> back</i>
+      <div className="shadow-sm p-3 mb-5  rounded" onClick={prev} id="frame_1_navbar">
+        <i className="fa-solid fa-arrow-left-long"> back</i>
       </div>
       {currentPage===1 &&(
         <>
-        <Frame1 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+        <Frame1 currentPage={currentPage} setCurrentPage={setCurrentPage} question={question} setQuestion={setQuestion} /></>
       )}
       {currentPage===2 &&(
         <>
-        <Frame2 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+        <Frame2 currentPage={currentPage} setCurrentPage={setCurrentPage}
+        questionTwo={questionTwo} setQuestionTwo={setQuestionTwo}/></>
       )}
       {currentPage===3 &&(
         <>
-        <Frame3 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+        <Frame3 currentPage={currentPage} setCurrentPage={setCurrentPage}
+        questionThree={questionThree} setQuestionThree={setQuestionThree}/></>
       )}
       {currentPage===4 &&(
         <>
-        <Frame4 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+        <Frame4 currentPage={currentPage} setCurrentPage={setCurrentPage}
+        questionFour={questionFour} setQuestionFour={setQuestionFour}/></>
       )}
            {currentPage===5 &&(
         <>
-        <Frame5 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+        <Frame5 currentPage={currentPage} setCurrentPage={setCurrentPage}
+        questionFive={questionFive} setQuestionFive={setQuestionFive}/></>
       )}
       {currentPage===6 &&(
         <>
-        <Frame6 currentPage={currentPage} setCurrentPage={setCurrentPage}/></>
+        <Frame6 currentPage={currentPage} setCurrentPage={setCurrentPage }
+        hairGoals={hairGoals} setHairGoals={setHairGoals}
+        btnData={btnData} setBtnData={setBtnData}/></>
       )}
       {currentPage===7&&(
         <>

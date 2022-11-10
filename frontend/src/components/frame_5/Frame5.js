@@ -5,9 +5,11 @@ import { useNavigate } from 'react-router-dom';
 const Frame5 = (props) => {
   const [btndata, setBtndata] = useState(false)
 
-    const datafunction = () => {
+    const datafunction = (data) => {
       if(btndata==false){
         setBtndata(true)
+        props.setQuestionFive(props.questionFive+data)
+        console.log(data)
       }
       else{
         setBtndata(false)
@@ -18,6 +20,7 @@ const Frame5 = (props) => {
     
     if(btndata==1){
     props.setCurrentPage(props.currentPage + 1)
+   
     }
     else {
       console.log("err")
@@ -76,7 +79,8 @@ return (
   
   <div className="frame1Mapinside col-sm-4 ">
   <button class="btn btn-outline-success btn_frame_no_5"
-   onClick={datafunction}>{btn}</button>
+  onClick={()=>datafunction(data)} 
+   >{btn}</button>
   
 </div>
 
@@ -94,7 +98,7 @@ return (
                 <a href="">WHY WE ASK</a>
 
                 </h5>
-                <button className = "btn btn-outline-green" id='next_btn' onClick={frameNavigate} >NEXT</button>
+                <button className = "btn btn-outline-green" id='next_btn'onClick={frameNavigate}>NEXT</button>
             </div>
 
             <div className='col-sm-3'></div>

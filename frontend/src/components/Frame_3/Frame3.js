@@ -4,8 +4,10 @@ import { useNavigate } from 'react-router-dom';
 
 const Frame3 = (props) => {
 
-  const frameNavigate =  () =>{
+  const frameNavigate =  (data) =>{
     props.setCurrentPage(props.currentPage + 1)
+    props.setQuestionThree(props.questionThree+data)
+    console.log(data)
     }
   
   const frame3_data = [
@@ -62,7 +64,7 @@ const Frame3 = (props) => {
         {frame3_data.map((data)=>{
   const {id, image, heading, para} = data
 return (
-  <div className="frame1Mapinside col-sm-4" onClick={frameNavigate}>
+  <div className="frame1Mapinside col-sm-4"    onClick={()=>frameNavigate(data)}>
      <img src={image} alt=""></img>
      <h3>{heading}</h3>
      <p>{para}</p>

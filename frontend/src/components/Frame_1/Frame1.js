@@ -7,9 +7,11 @@ import "./frame_1.css";
 const Frame1 = (props) => {
   // const navigate = useNavigate();
 
-  const frameNavigate =  () =>{
+  const frameNavigate =  (data) =>{
 
     props.setCurrentPage(props.currentPage + 1)
+    props.setQuestion(props.question+data)
+    console.log(data)
   }
       const frame1_data = [
     {
@@ -68,9 +70,9 @@ const Frame1 = (props) => {
         <div className="col-sm-2"></div>
         <div className="col-sm-8">
           {" "}
-          <div class="progress">
+          <div className="progress">
             <div
-              class="progress-bar"
+              className="progress-bar"
               role="progressbar"
               style={{ width: "14.5%" }}
               aria-valuenow="25"
@@ -96,10 +98,10 @@ const Frame1 = (props) => {
 
         <div className="option_1">
        
-<div className="frame1Map">{frame1_data.map((data)=>{
+<div className="frame1Map">{frame1_data.map((data,key)=>{
   const {id, image, heading, para} = data
 return (
-  <div className="frame1Mapinside col-sm-3"  onClick={frameNavigate}>
+  <div className="frame1Mapinside col-sm-3" key={key} onClick={()=>frameNavigate(data)}>
      <img src={image} alt=""></img>
      <h3>{heading}</h3>
      <p>{para}</p>
