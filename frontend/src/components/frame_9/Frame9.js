@@ -231,7 +231,6 @@ const Frame9 = (props) => {
                   ) : null}
 
                   <div id="but" className="d-grid gap-2">
-                    {/* <input type="submit" class="bg-info text-white butsend" value="Submit@123"/> */}
                     <button
                       class="btn btn-success"
                       type="submit"
