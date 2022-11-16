@@ -1,6 +1,5 @@
 import React from "react";
 import { useFormik } from "formik";
-import { useEffect, useState } from "react";
 import axios from "axios";
 import { deliverySchema } from "../../schemas";
 
@@ -56,7 +55,7 @@ const Frame9 = (props) => {
                   </label>
                   <input
                               autoComplete='off'
-
+maxLength="25"
                     type="text"
                     class="form-control frame_9_input bg-light"
                     id="formGroupExampleInput "
@@ -82,7 +81,7 @@ const Frame9 = (props) => {
                     </label>
                     <input
                                 autoComplete='off'
-
+maxLength="45"
                       class="form-control frame_9_input bg-light "
                       id="formGroupExampleInput "
                       placeholder="Enter Your Street"
