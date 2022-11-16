@@ -84,7 +84,7 @@ const Frame1 = (props) => {
           <p className="text-center">
             Your hair when its untreated or unstyled
           </p>
-          <h5 className="text-center">
+          <h5 className="text-center mb-5" >
             <a href="">HOW TO ANSWER</a>
           </h5>
         </div>
